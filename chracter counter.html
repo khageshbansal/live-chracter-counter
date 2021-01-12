@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chracter counter</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Live Chracter counter</h2>
+        <textarea placeholder="Write your text here...." onkeypress="increase()"></textarea>
+        <p>Total chracters:<span>0</span></p>
+    </div>
+</body>
+
+<style>
+    *{padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: aqua;}
+
+    .container{background: aliceblue;
+    padding: 30px;
+    font-size: 150%;
+    box-shadow: 0 5px 15px grey;}
+
+    h2{
+    color: rgb(1, 80, 1);}
+
+    textarea{height: 200px;
+    width: 40vw;
+    margin:20px 0 20px 0;
+    padding: 10px;
+    font-size: large;
+    outline: none;
+    border:2px solid black;
+    border-radius: 5px;}
+
+    span{color: red;
+    font-size: 150%;
+    font-weight: 600;
+    margin-left: 10px;}
+
+    @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  textarea{height: 400px;
+  width:100%;}
+  .container{margin:15px}
+  h2{text-align: center;}
+  }
+</style>
+
+<script>
+   var count= document.getElementsByTagName("span");
+   var ginti=0;
+
+   function increase(){
+    ginti++;
+    count[0].innerText=ginti;
+   }
+</script>
+</html>
